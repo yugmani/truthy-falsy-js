@@ -102,5 +102,5 @@ const array1 = [10, 20, 'raj', 0, [], '', NaN, 3, undefined, 50, null, 89];
 
 const validArray = array1.filter(Boolean);
 
-console.log(validArray);
+// console.log(validArray);
 // (7) [10, 20, "raj", Array(0), 3, 50, 89]
