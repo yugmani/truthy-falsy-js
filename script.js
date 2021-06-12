@@ -47,3 +47,24 @@ function isTruthy(value) {
 // console.log('false:', isTruthy(false)); //false
 
 
+// *************************************
+// turn any value into its truthy or falsy boolean value by flipping it twice:
+// *************************************
+
+let num1;
+console.log(!!num1); //false
+
+let num2 = 10;
+console.log(!!num2);    //true  
+
+const name1 = "Tram";
+console.log(!!name1);   //true
+
+const name2 = "";
+console.log(!!name2);   //false
+
+const nullValue = null;
+console.log(!!nullValue);   //false
+
+
+
