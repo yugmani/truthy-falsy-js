@@ -104,3 +104,49 @@ const validArray = array1.filter(Boolean);
 
 // console.log(validArray);
 // (7) [10, 20, "raj", Array(0), 3, 50, 89]
+
+//  *******************************************
+//  Truthy and Falsy Values in JavaScript
+//  *******************************************
+
+// When we say that a value is "truthy" in JavaScript, we don't just mean that the value is true. Rather, what we mean is that the value coerces to true when evaluated in a boolean context.
+
+function reportAttitude(person) {
+  if (person.skepticism) {
+    console.log(person.name + ' is skeptical about ' + person.skepticism);
+  } else {
+    console.log(person.name + ' wants to believe.');
+  }
+}
+
+var mulder = {
+  name: 'Fox Mulder'
+};
+
+var scully = {
+  name: 'Dana Scully',
+  skepticism: 'UFOs & consipiracy theories'
+};
+
+var frohikey = {
+  name: 'Melvin Frohikey',
+  skepticism: ''
+};
+
+reportAttitude(mulder); // Fox Mulder wants to believe.
+
+reportAttitude(scully); // Dana Scully is skeptical about UFOs & consipiracy theories
+
+reportAttitude(frohikey); // Melvin Frohikey wants to believe.
+
+// Taking advantage of truthiness can make your code a little bit more concise. 
+// We don't need to explicitly check for undefined, "", etc.
+// Instead we can just check whether person.skepticism is truthy.
+
+// this approach only works if all of the falsy values should be excluded (or included.)
+// For instance, if a value of 0 or "" was meaningful, then the if above would not function correctly.
+
+// it is important to keep in mind that truthiness is not the same as == true.
+
+// The algorithm for loose equality is much more complicated than for truthiness.
+
